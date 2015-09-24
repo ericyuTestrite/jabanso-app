@@ -1,0 +1,13 @@
+<ion-view view-title="找幫手">
+  <ion-content>
+    <ion-slide-box class="home-slide" auto-play="true" does-continue="true" show-pager="false" slide-interval="3000">
+	  <ion-slide ng-repeat="banner in banners">
+	  	<img ng-src="{{banner.img}}" class="home-slide">
+	  </ion-slide>
+	</ion-slide-box>
+	<br>
+	<a href="#/app/search" class="button button-bar button-positive center">我要找幫手</a>
+	<br>
+	<a class="button button-bar button-stable center" ng-click="login()">我是好幫手</a>
+  </ion-content>
+</ion-view>

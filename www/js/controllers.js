@@ -44,6 +44,14 @@ angular.module('starter.controllers', [])
 .controller('WelcomeCtrl', function($scope) {
 })
 
+.controller('HomeCtrl', function($scope) {
+    $scope.banners = [ {img: 'img/banner1.jpg'},
+                    {img: 'img/banner2.jpg'},
+                    {img: 'img/banner3.jpg'}
+                  ];
+    console.log('in homeCtrl');
+})
+
 .controller('PlaylistsCtrl', function($scope) {
   $scope.playlists = [
     { title: 'Reggae', id: 1 },

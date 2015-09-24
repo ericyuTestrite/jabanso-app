@@ -27,16 +27,29 @@ angular.module('starter', ['ionic', 'starter.controllers'])
 
   .state('welcome', {
     url: '/welcome',
-    abstract: false,
     templateUrl: 'templates/welcome.html',
     controller: 'WelcomeCtrl'
   })
+
+
 
   .state('app', {
     url: '/app',
     abstract: true,
     templateUrl: 'templates/menu.html',
     controller: 'AppCtrl'
+  })
+
+  .state('app.home', {
+    url: '/home',
+    
+    
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/home.html',
+        controller: 'HomeCtrl'
+      }
+    }
   })
 
   .state('app.search', {
