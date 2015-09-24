@@ -9,6 +9,7 @@
 
 # 增加 Plugin, 要執行
 ~~~
+    > cd cd jabanso-app
     > cordova plugin add com.ionic.keyboard
     > cordova plugin add cordova-plugin-console
     > cordova plugin add cordova-plugin-device
@@ -19,7 +20,7 @@
 # 設定為支援 Android 
 
      > cd jabanso-app
-     > ionic platform add android
+     > cordova platform add android
 
 # 建立 Icon 及 Splash 
 要先確認 resources 目錄已經存在 
