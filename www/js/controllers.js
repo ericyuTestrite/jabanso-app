@@ -1,4 +1,4 @@
-angular.module('starter.controllers', [])
+angular.module('starter.controllers', ['starter.services'])
 
 .controller('AppCtrl', function($scope, $ionicModal, $timeout) {
 
@@ -44,12 +44,20 @@ angular.module('starter.controllers', [])
 .controller('WelcomeCtrl', function($scope) {
 })
 
+
+
 .controller('HomeCtrl', function($scope) {
     $scope.banners = [ {img: 'img/banner1.jpg'},
                     {img: 'img/banner2.jpg'},
                     {img: 'img/banner3.jpg'}
                   ];
     console.log('in homeCtrl');
+})
+
+.controller('BrowseCtrl', function($scope, GreatHelpers) {
+  console.log('in BrowseCtrl');
+  var greatHelpers = GreatHelpers.getGreatHelpers();
+  $scope.helpers = greatHelpers;
 })
 
 .controller('PlaylistsCtrl', function($scope) {

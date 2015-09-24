@@ -3,6 +3,14 @@
 		background-color: #3caa91;
 	}
 
+	.bg-stable {
+		background-color: #3caa91;
+	}
+
+	.bg-positive {
+		background-color: #ffc000;
+	}
+
 	.responsive-img {
 		width: 100%;
 	}
