@@ -10,3 +10,18 @@
 
      > cd jabanso-app
      > ionic serve
+
+####佈署到 Android, 需先將手機開啟開發模式, 
+
+     > cd jabanso-app
+     > ionic platform add android
+     > ionic run android --device
+
+####Genreate Icon (places icon.png and splash.png in resource)
+
+     > cd jabanso-app
+     > ionic resources
+
+####色調 
+底色(綠):  #3caa91
+文字(黃):  #ffc000

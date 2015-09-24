@@ -41,6 +41,9 @@ angular.module('starter.controllers', [])
   };
 })
 
+.controller('WelcomeCtrl', function($scope) {
+})
+
 .controller('PlaylistsCtrl', function($scope) {
   $scope.playlists = [
     { title: 'Reggae', id: 1 },

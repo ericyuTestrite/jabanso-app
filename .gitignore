@@ -6,3 +6,4 @@ platforms/
 plugins/
 resources/android/
 resources/ios/
+.sass-cache/
