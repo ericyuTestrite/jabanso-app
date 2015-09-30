@@ -1,9 +1,23 @@
-<ion-view view-title="關於我們">
+<ion-view view-title="Playlists">
   <ion-content>
-    <ion-list>
+  <br/><br/>
+  	<div>
+      <button class="button button-full button-positive" ng-click="login()" ng-disabled="loginStatus.status == 'connected'">Connect with Facebook</button>
+       &nbsp; 
+      <button class="button button-full button-positive" ng-click="logout()" ng-disabled="!loginStatus || loginStatus.status != 'connected'">Logout</button>
+       &nbsp;
+      <button class="button button-full button-positive" ng-click="share()">FB.ui</button>
+    </div>
+    <!-- <ion-list>
       <ion-item ng-repeat="playlist in playlists" href="#/app/playlists/{{playlist.id}}">
         {{playlist.title}}
       </ion-item>
-    </ion-list>
+    </ion-list> -->
+    <div>
+    	姓名：{{userName}}
+    </div>
+    <div>
+    	<img ng-src="{{myPicture}}">
+	</div>
   </ion-content>
 </ion-view>
