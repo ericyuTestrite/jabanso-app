@@ -5,11 +5,14 @@
 	  	<img ng-src="{{banner.img}}" class="home-slide">
 	  </ion-slide>
 	</ion-slide-box>
-	<br>
-	<a href="#/app/browse" class="button button-bar button-positive center">優質幫手</a>
-	<br>
-	<a href="#/app/search" class="button button-bar button-positive center">我要找幫手</a>
-	<br>
-	<a class="button button-bar button-positive center" ng-click="login()">我是好幫手</a>
+	<div>
+      <a href="#/app/browse"><div class="item item-image">
+      <img src="img/home_01.png" ></a>
+      <a href="#/app/search"><div class="item item-image">
+      <img src="img/home_02.png" ></a>
+    
+	<a ng-click="login()"><div class="item item-image">
+      <img src="img/home_03.png" ></a>
+	</div>
   </ion-content>
 </ion-view>
