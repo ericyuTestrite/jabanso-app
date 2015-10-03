@@ -1,5 +1,51 @@
-<ion-view view-title="尋找好幫手">
-  <ion-content>
-    <h1>我是好幫手</h1>
-  </ion-content>
+<ion-view view-title="我是好幫手">
+  <form ng-submit="submit()" ng-controller="JoinCtrl">
+    <ion-content>
+      <form novalidate>
+        <div class="list">
+          <label class="item item-input item-stacked-label">
+            <span class="input-label">名字(公司)</span>
+            <input type="text" name="helperName" ng-model="joinform.helperName" ng-maxlength="50" placeholder="ex: John">
+          </label>
+          <label class="item item-input item-stacked-label">
+            <span class="input-label">加入時間</span>
+            <input type="text" name="joinDate" ng-model="joinform.joinDate" style="background-color:#f7f7f7" readonly>
+          </label>
+          <label class="item item-input item-stacked-label">
+            <span class="input-label">服務內容</span>
+            <input type="text" name="serviceScope" ng-model="joinform.serviceScope" ng-maxlength="80" placeholder="ex: 室內設計、水電工程">
+          </label>
+          <label class="item item-input item-stacked-label">
+            <span class="input-label">地址/區域</span>
+            <input type="text" name="address" ng-model="joinform.address" ng-maxlength="80" placeholder="ex: 台北市新湖三路23號">
+          </label>
+          <label class="item item-input item-stacked-label">
+            <span class="input-label">服務時間</span>
+            <input type="text" name="serviceTime" ng-model="joinform.serviceTime" ng-maxlength="50" placeholder="ex: 8:00 ~ 18:00">
+          </label>
+          <label class="item item-input item-select">
+            <span class="input-label">資歷</span>
+            <select name="seniority" ng-model="joinform.seniority">
+              <option value="1">1年</option>
+              <option value="2">2年</option>
+              <option value="3">3年</option>
+              <option value="4">4年</option>
+              <option value="5">5年</option>
+              <option value="6">6年</option>
+              <option value="7">7年</option>
+              <option value="8">8年</option>
+              <option value="9">9年</option>
+              <option value="10">10年</option>
+              <option value="N">10年以上</option>
+            </select>
+          </label>
+          <label class="item item-input item-stacked-label">
+            <span class="input-label">作品</span>
+
+          </label>
+          <button type="submit" class="button button-block button-positive">加入幫手</button>
+        </div>
+      </form>
+    </ion-content>
+  </form>
 </ion-view>
