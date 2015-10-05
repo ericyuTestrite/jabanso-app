@@ -1,38 +1,10 @@
 angular.module('starter.services',[])
 
-.factory('GreatHelpers',function(){
-	console.log('in GreatHelpers services');
-	var greatHelpers =[
-	    { 	firstName: 'Eric',
-			lastName: 'Yu',
-			avatarImage: 'img/helper1.jpg',
-			registrationDate: '2015-9-18',
-			advertiseImg: 'img/banner1.jpg',
-			serviceDesc: '行李箱開鎖, 行李箱滾輪加油修鞋、擦皮鞋、洗鞋修包、洗包,另配鑰匙(行李箱、家、車、捲簾門、櫥櫃等)',
-			serviceGeo: [192.29929292,121.29929292],
-			comments: [ 
-				{rating: 5,
-				comments: 'Great Helper'}
-			],
-			starCount: 1
-	    },
-	    { 	firstName: 'Ken',
-			lastName: 'Chang',
-			avatarImage: 'img/helper2.jpg',
-			registrationDate: '2015-8-18',
-			advertiseImg: 'img/banner2.jpg',
-			serviceDesc: '行李箱開鎖, 行李箱滾輪加油修鞋、擦皮鞋、洗鞋修包、洗包,另配鑰匙(行李箱、家、車、捲簾門、櫥櫃等)',
-			serviceGeo: [192.29929292,121.29929292],
-			comments: [ 
-				{rating: 5,
-				comments: 'Great Helper'}
-			],
-			starCount: 1
-	    }
-	];
+.factory('myServices',function(){
+	console.log('in starter.services services');
 	return {
-		getGreatHelpers: function(){
-			return greatHelpers;
+		getData: function(){
+			return 'Hello World!';
 		}
 	}
 });

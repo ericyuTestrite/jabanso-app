@@ -1,4 +1,4 @@
-angular.module('starter.controllers', ['starter.services'])
+angular.module('starter.controllers', ['starter.services','model.services'])
 
 .controller('AppCtrl', function($scope, $ionicModal, $timeout) {
 
@@ -54,9 +54,9 @@ angular.module('starter.controllers', ['starter.services'])
     console.log('in homeCtrl');
 })
 
-.controller('BrowseCtrl', function($scope, GreatHelpers) {
+.controller('BrowseCtrl', function($scope, ServerModel) {
   console.log('in BrowseCtrl');
-  var greatHelpers = GreatHelpers.getGreatHelpers();
+  var greatHelpers = ServerModel.getGreatHelpers();
   $scope.helpers = greatHelpers;
 })
 
