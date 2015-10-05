@@ -17,6 +17,12 @@
     > cordova plugin add cordova-plugin-whitelist
 ~~~
 
+## 增加 Bower, 要執行
+~~~
+    > cd jabanso-app
+    > bower install angular-base64-upload
+~~~
+
 ## 設定為支援 Android 
 
      > cd jabanso-app
