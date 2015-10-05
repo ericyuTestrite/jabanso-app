@@ -8,101 +8,100 @@
 // 'starter.controllers' is found in controllers.js
 angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', 'model.services', 'ezfb', 'join.controllers'])
 
-.run(function($ionicPlatform) {
-  $ionicPlatform.ready(function() {
-    // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
-    // for form inputs)
-    if (window.cordova && window.cordova.plugins.Keyboard) {
-      cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);
-      cordova.plugins.Keyboard.disableScroll(true);
+  .run(function ($ionicPlatform) {
+    $ionicPlatform.ready(function () {
+      // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
+      // for form inputs)
+      if (window.cordova && window.cordova.plugins.Keyboard) {
+        cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);
+        cordova.plugins.Keyboard.disableScroll(true);
 
-    }
-    if (window.StatusBar) {
-      // org.apache.cordova.statusbar required
-      StatusBar.styleDefault();
-    }
-  });
-})
-
-.config(function($stateProvider, $urlRouterProvider, ezfbProvider) {
-  ezfbProvider.setInitParams({
-    appId: '311786232325462'
-  });  
-  
-  $stateProvider
-
-  .state('welcome', {
-    url: '/welcome',
-    templateUrl: 'templates/welcome.html',
-    controller: 'WelcomeCtrl'
-  })
-
-
-
-  .state('app', {
-    url: '/app',
-    abstract: true,
-    templateUrl: 'templates/menu.html',
-    controller: 'AppCtrl'
-  })
-
-  .state('app.home', {
-    url: '/home',
-    views: {
-      'menuContent': {
-        templateUrl: 'templates/home.html',
-        controller: 'HomeCtrl'
       }
-    }
-  })
-
-  .state('app.search', {
-    url: '/search',
-    views: {
-      'menuContent': {
-        templateUrl: 'templates/search.html'
+      if (window.StatusBar) {
+        // org.apache.cordova.statusbar required
+        StatusBar.styleDefault();
       }
-    }
+    });
   })
 
-  .state('app.join', {
-    url: '/join',
-    views: {
-      'menuContent': {
-        templateUrl: 'templates/join.html',
-        controller: 'JoinCtrl'
-      }
-    }
-  })
+  .config(function ($stateProvider, $urlRouterProvider, ezfbProvider) {
+    ezfbProvider.setInitParams({
+      appId: '311786232325462'
+    });
 
-  .state('app.browse', {
-      url: '/browse',
-      views: {
-        'menuContent': {
-          templateUrl: 'templates/browse.html',
-          controller: 'BrowseCtrl'
+    $stateProvider
+
+      .state('welcome', {
+        url: '/welcome',
+        templateUrl: 'templates/welcome.html',
+        controller: 'WelcomeCtrl'
+      })
+
+
+      .state('app', {
+        url: '/app',
+        abstract: true,
+        templateUrl: 'templates/menu.html',
+        controller: 'AppCtrl'
+      })
+
+      .state('app.home', {
+        url: '/home',
+        views: {
+          'menuContent': {
+            templateUrl: 'templates/home.html',
+            controller: 'HomeCtrl'
+          }
         }
-      }
-    })
-    .state('app.playlists', {
-      url: '/playlists',
-      views: {
-        'menuContent': {
-          templateUrl: 'templates/playlists.html',
-          controller: 'PlaylistsCtrl'
-        }
-      }
-    })
+      })
 
-  .state('app.single', {
-    url: '/playlists/:playlistId',
-    views: {
-      'menuContent': {
-        templateUrl: 'templates/playlist.html',
-        controller: 'PlaylistCtrl'
-      }
-    }
+      .state('app.search', {
+        url: '/search',
+        views: {
+          'menuContent': {
+            templateUrl: 'templates/search.html'
+          }
+        }
+      })
+
+      .state('app.join', {
+        url: '/join',
+        views: {
+          'menuContent': {
+            templateUrl: 'templates/join.html',
+            controller: 'JoinCtrl'
+          }
+        }
+      })
+
+      .state('app.browse', {
+        url: '/browse',
+        views: {
+          'menuContent': {
+            templateUrl: 'templates/browse.html',
+            controller: 'BrowseCtrl'
+          }
+        }
+      })
+      .state('app.playlists', {
+        url: '/playlists',
+        views: {
+          'menuContent': {
+            templateUrl: 'templates/playlists.html',
+            controller: 'PlaylistsCtrl'
+          }
+        }
+      })
+
+      .state('app.single', {
+        url: '/playlists/:playlistId',
+        views: {
+          'menuContent': {
+            templateUrl: 'templates/playlist.html',
+            controller: 'PlaylistCtrl'
+          }
+        }
+      });
+    // if none of the above states are matched, use this as the fallback
+    $urlRouterProvider.otherwise('/welcome');
   });
-  // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/welcome');
-});
