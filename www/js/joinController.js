@@ -11,6 +11,7 @@ angular.module('join.controllers', ['starter.services','naif.base64'])
     var uploadedCount = 0;
     $scope.files = [];
 
+    //取回localStorage資料
     var profileStr = localStorage.getItem("profile");
     if (profileStr !== null) {
       var profile = JSON.parse(profileStr);
