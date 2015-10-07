@@ -170,7 +170,7 @@ angular.module('starter.controllers', ['starter.services','model.services'])
           $scope.myPicture = "http://portal.testritegroup.com/zh_TW/images/login_1_01_.jpg";
           $scope.userName = "";
         };
-        
+
         $scope.apiRes = resList;
       });
 

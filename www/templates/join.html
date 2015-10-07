@@ -43,32 +43,15 @@
             <span class="input-label">作品</span>
             <br/>
             <br/>
-            <input type="file" ng-model="file" name="file" base-sixty-four-input required onload="onLoad"
-                   maxsize="500" accept="image/*">
+            <img ng-src="{{lastPhoto}}" style="max-width: 100%">
+            <img ng-src="data:image/jpeg;base64,{{galleryPhoto}}" style="max-width: 100%"/>
           </label>
-            <b>Model Value:</b>
-            <table>
-              <tr>
-                <th>filename</th>
-                <th>filetype</th>
-                <th>filesize (<i>
-                  <small>KB</small>
-                </i>)
-                </th>
-                <th>base64</th>
-              </tr>
-              <tr ng-show="file">
-                <td>{{file.filename}}</td>
-                <td>{{file.filetype}}</td>
-                <td>{{file.filesize / 1000}}</td>
-                <td>{{file.base64.substring(0, 30)}}...</td>
-              </tr>
-              <tr>
-                <td colspan="4" ng-show="!file">
-                  <small><i>No file selected.</i></small>
-                </td>
-              </tr>
-            </table>
+          <button ng-click="capturePhoto()" class="button button-block button-primary">Photo</button><br>
+
+          <button ng-click="getPhoto()" class="button button-block button-primary">From Photo Library</button><br>
+
+
+
           <button type="submit" class="button button-block button-positive">加入幫手</button>
         </div>
       </form>

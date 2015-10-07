@@ -1,9 +1,9 @@
 /* global angular, console*/
 'use strict';
 
-angular.module('join.controllers', ['starter.services','naif.base64'])
+angular.module('join.controllers', ['starter.services', 'naif.base64', 'camera.services'])
 
-  .controller('JoinCtrl', function ($scope) {
+  .controller('JoinCtrl', function ($scope, Camera) {
     console.log('in JoinCtrl');
     var nowDate = new Date();
     var monthStr = parseInt(nowDate.getMonth()) + 1;
@@ -33,12 +33,34 @@ angular.module('join.controllers', ['starter.services','naif.base64'])
       localStorage.setItem("profile", profileStr);
     };
 
-    $scope.onChange = function (e, fileList) {
-      console.log('this is on-change handler!');
+    $scope.capturePhoto = function () {
+      console.log('Getting camera');
+      Camera.getPicture({
+        quality: 75,
+        targetWidth: 320,
+        targetHeight: 320,
+        saveToPhotoAlbum: false
+      }).then(function (imageURI) {
+        console.log(imageURI);
+        $scope.lastPhoto = imageURI;
+      }, function (err) {
+        console.err(err);
+      });
     };
 
-    $scope.onLoad = function (e, reader, file, fileList, fileOjects, fileObj) {
-      console.log('this is handler for file reader onload event!');
+    $scope.getPhoto = function () {
+      console.log('Getting photo');
+      var pictureSource=navigator.camera.PictureSourceType;
+      var destinationType=navigator.camera.DestinationType;
+      Camera.getPicture({
+        quality: 50,
+        destinationType: destinationType.DATA_URL,
+        sourceType: pictureSource.PHOTOLIBRARY
+      }).then(function (imageURI) {
+        $scope.galleryPhoto = imageURI;
+      }, function (err) {
+        console.err(err);
+      });
     };
 
   });

@@ -15,6 +15,7 @@
     > cordova plugin add cordova-plugin-device
     > cordova plugin add cordova-plugin-splashscreen
     > cordova plugin add cordova-plugin-whitelist
+    > cordova plugin add org.apache.cordova.camera
 ~~~
 
 ## 增加 Bower, 要執行
