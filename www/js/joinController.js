@@ -1,7 +1,7 @@
 /* global angular, console*/
 'use strict';
 
-angular.module('join.controllers', ['starter.services', 'naif.base64', 'camera.services'])
+angular.module('join.controllers', ['starter.services', 'camera.services'])
 
   .controller('JoinCtrl', function ($scope, Camera) {
     console.log('in JoinCtrl');
