@@ -7,17 +7,21 @@ angular.module('model.services',[])
 	return {
 		getMemberProfile: function(memberId){
 			var member = {
-				memberId: memberId, 
-				firstName: 'Eric', 
-				lastName: 'Yu',
-				email:'eric.yu@testritegroup.com',
-				avaterImage: ''   //path
+				memberId: 10001,  //varchar
+				firstName: 'Eric',  //varchar
+				lastName: 'Yu', //varchar
+				email:'eric.yu@testritegroup.com', //varchar
+				avaterImage: '', //varchar
+				favories: [{ 
+						helperId: 5678  // long
+				}]
 			};
 			return member;
 		},
 		getGreatHelpers: function(){
 			var greatHelpers =[
-			    { 	firstName: 'Eric',
+			    {	helperId: 1234,
+			     	firstName: 'Eric',
 					lastName: 'Yu',
 					avatarImage: 'img/helper1.jpg',
 					registrationDate: '2015-9-18',
@@ -30,7 +34,8 @@ angular.module('model.services',[])
 					],
 					starCount: 1
 			    },
-			    { 	firstName: 'Ken',
+			    { 	helperId: 5678,
+			     	firstName: 'Ken',
 					lastName: 'Chang',
 					avatarImage: 'img/helper2.jpg',
 					registrationDate: '2015-8-18',
@@ -45,6 +50,35 @@ angular.module('model.services',[])
 			    }
 			];
 			return greatHelpers;
+		},
+		getMyRequirement: function(){
+			var myRequirement = [{
+				reqId: 4444,
+				memberId: 10001,
+				content: '', //varchar
+				createDate: '2015-10-23 10:00:23',
+				implementPlanDate: '2015-10-23',
+				status: 'Processing' // 提出
+			}];
+			return myRequirement;
+		},
+		postRequirement: function(req){
+			return true;
+		},
+
+		getMyDeal: function(){
+			var deals = [{
+					dealId: 5555,
+					memberId: 10001,
+					helperId: 1234,
+					implementPlanDate: '2015-10-23 10:00:23', 
+					implement:[{
+						implementDate: '2015-10-23 10:00:23',
+						implementPhotos: [{implementImage: 'dddd.jpg'}]
+					}],
+					memberComments: '師傅太專業了!'
+			}];
+			return deals;
 		}
 	}; //return
 });
