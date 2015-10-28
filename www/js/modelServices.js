@@ -58,6 +58,9 @@ angular.module('model.services',[])
 				content: '', //varchar
 				createDate: '2015-10-23 10:00:23',
 				implementPlanDate: '2015-10-23',
+				implementPlace: '台北市新湖三路....',
+				implementGeo: [192.29929292,121.29929292],
+				budget: 20000,
 				status: 'Processing' // 提出
 			}];
 			return myRequirement;
@@ -71,6 +74,8 @@ angular.module('model.services',[])
 					dealId: 5555,
 					memberId: 10001,
 					helperId: 1234,
+					implementPlanDate: '2015-10-23 10:00:23', 
+					status: '',  //預約/確認//完成
 					implementPlanDate: '2015-10-23 10:00:23', 
 					implement:[{
 						implementDate: '2015-10-23 10:00:23',
