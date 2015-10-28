@@ -85,6 +85,12 @@ angular.module('starter.controllers', ['starter.services','model.services'])
 })
 
 .controller('WelcomeCtrl', function($scope) {
+   $scope.logins = [ {img: 'img/login1.jpg'},
+                    {img: 'img/login2.jpg'},
+                    {img: 'img/login3.jpg'},
+                    {img: 'img/login4.jpg'}
+                  ];
+    console.log('in WelcomeCtrl');
 })
 
 

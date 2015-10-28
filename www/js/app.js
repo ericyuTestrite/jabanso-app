@@ -8,6 +8,7 @@
 // 'starter.controllers' is found in controllers.js
 angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', 'model.services','camera.services', 'ngOpenFB', 'join.controllers'])
 
+
   .run(function ($ionicPlatform, ngFB) {
     $ionicPlatform.ready(function () {
       // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
@@ -27,7 +28,6 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
 
   .config(function ($stateProvider, $urlRouterProvider) {
     $stateProvider
-
       .state('welcome', {
         url: '/welcome',
         templateUrl: 'templates/welcome.html',

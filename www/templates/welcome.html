@@ -1,7 +1,18 @@
 <ion-view view-title="Welcome">
-  <ion-content class="welcome">
-	<img src="img/slogon.png" class="responsive-img">
-	<br>
-    <div class="button-bar"><a href="#/app/home" class="button button-positive">開始</a> </div>
+ <ion-content class="bg-stable">
+ <br>
+    <ion-slide-box class="welcome-slide" auto-play="true" does-continue="true" show-pager="false" slide-interval="3000">
+	  <ion-slide ng-repeat="login in logins">
+	  	<img ng-src="{{login.img}}" class="welcome-slide">
+	  </ion-slide>
+	</ion-slide-box>
+	<br><br><br><br>
+    <div >
+      <a href="#/app/home"><div class="item item-image"><img src="img/fb.png" ></a>
+    </div>
+      <div >
+      <a href="#/app/home"><div class="item item-image"><img src="img/email.png" ></a>
+    </div>
+</div>
   </ion-content>
 </ion-view>
