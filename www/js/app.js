@@ -90,6 +90,52 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
         }
       })
 
+      .state('app.searchresult', {
+        url: '/searchresult',
+        views: {
+          'menuContent': {
+            templateUrl: 'templates/searchresult.html',
+             controller: 'PlaylistsCtrl'
+          }
+        }
+      })
+
+
+
+      .state('app.choose', {
+        url: '/choose',
+        views: {
+          'menuContent': {
+            templateUrl: 'templates/choose.html',
+            controller: 'JoinCtrl'
+          }
+        }
+      })
+
+
+
+      .state('app.list', {
+        url: '/list',
+        views: {
+          'menuContent': {
+            templateUrl: 'templates/list.html',
+            controller: 'JoinCtrl'
+          }
+        }
+      })
+
+
+      .state('app.order', {
+        url: '/order',
+        views: {
+          'menuContent': {
+            templateUrl: 'templates/order.html',
+            controller: 'JoinCtrl'
+          }
+        }
+      })
+
+
       .state('app.single', {
         url: '/playlists/:playlistId',
         views: {
